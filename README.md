@@ -1,4 +1,5 @@
-<h3 allign = 'centre'>Filter Selected Vendor</h3>
+<h1 align="center"> Repository which contain usefull DAX formulas</h1>
+<h3 align = "center">Filter Selected Vendor</h3>
 <p>Dax formula to change title based on filter selection</p>
 
 ```DAX
@@ -13,3 +14,4 @@ IF (
     "All Vendors"
 )
 ```
+
