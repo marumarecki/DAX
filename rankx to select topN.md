@@ -8,7 +8,8 @@ TopN = GENERATESERIES(0, 5, 1)
 
 ```DAX
 topN = 
- Var weekrank = RANKX(ALL('Sales Data'[FinancialWeekNumber]), SUMX(RELATEDTABLE('Sales Data'), 'Sales Data'[HDSalesQuantity_in_BOM]))
+ Var weekrank =
+ RANKX(ALL('Sales Data'[FinancialWeekNumber]), SUMX(RELATEDTABLE('Sales Data'), 'Sales Data'[Sales_Qty]))
  VAR SelectedTopN = SELECTEDVALUE('TopN'[TopN])
  RETURN
  SWITCH(
@@ -23,7 +24,8 @@ topN =
 
 ```DAX
 bottomN = 
- Var weekrank = RANKX(ALL('Sales Data'[FinancialWeekNumber]), SUMX(RELATEDTABLE('Sales Data'), 'Sales Data'[HDSalesQuantity_in_BOM]),,ASC)
+ Var weekrank =
+ RANKX(ALL('Sales Data'[FinancialWeekNumber]), SUMX(RELATEDTABLE('Sales Data'), 'Sales Data'[HDSalesQuantity_in_BOM]),,ASC)
  VAR SelectedTopN = SELECTEDVALUE(BottomN[BottomN])
  RETURN
  SWITCH(
